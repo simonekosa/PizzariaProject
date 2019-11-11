@@ -1,10 +1,5 @@
 ﻿using MySql.Data.MySqlClient;
-using System;
-using System.Collections.Generic;
 using System.Configuration;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BaseDados
 {
@@ -19,7 +14,7 @@ namespace BaseDados
 
         public MySqlConnection getConexao()
         {
-            string conn = ConfigurationManager.ConnectionStrings["MysqlConectionString"].ToString();
+            string conn = ConfigurationManager.ConnectionStrings["MySQLConectionString"].ToString();
             return new MySqlConnection(conn);
         }
     }

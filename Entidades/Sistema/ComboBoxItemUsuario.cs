@@ -13,5 +13,10 @@
             Senha = senha;
 
         }
+
+        public override string ToString()
+        {
+            return Login;
+        }
     }
 }

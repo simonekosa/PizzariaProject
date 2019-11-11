@@ -1,4 +1,5 @@
-﻿using Negocios.Pessoas;
+﻿using Entidades.Sistema;
+using Negocios.Pessoas;
 using System;
 using System.Reflection;
 using System.Windows.Forms;
@@ -28,7 +29,7 @@ namespace InterfaceUsuario.Login
             {
                 foreach (var item in lista)
                 {
-
+                    cmbUsuarios.Items.Add(new ComboBoxItemUsuario(item.Login, item.Codigo, item.Senha));
                 }
             }
 
