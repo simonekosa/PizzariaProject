@@ -1,12 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
 using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace InterfaceUsuario.Login
@@ -22,6 +15,14 @@ namespace InterfaceUsuario.Login
         {
             var version = Assembly.GetExecutingAssembly().GetName().Version;
             lblVersao.Text = string.Format(lblVersao.Text, version.Major, version.Minor, version.Build, version.Revision);
+
+            //Metodo para carregar usuarios no login
+            CarregarUsuarios();
+        }
+
+        private void CarregarUsuarios()
+        {
+            
         }
     }
 }
