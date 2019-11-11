@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Negocios.Pessoas;
+using System;
 using System.Reflection;
 using System.Windows.Forms;
 
@@ -22,7 +23,15 @@ namespace InterfaceUsuario.Login
 
         private void CarregarUsuarios()
         {
-            
+            var lista = new UsuarioNG().ListarUsuarios();
+            if(lista.Count > 0)
+            {
+                foreach (var item in lista)
+                {
+
+                }
+            }
+
         }
     }
 }
