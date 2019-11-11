@@ -16,5 +16,19 @@ namespace InterfaceUsuario
         {
             InitializeComponent();
         }
+
+        private void MDIFrm_Load(object sender, EventArgs e)
+        {
+            foreach(Control control in Controls)
+            {
+                if(control is MdiClient)
+                {
+                    control.BackgroundImage = Properties.Resources.fundo;
+                    control.BackgroundImageLayout = ImageLayout.Zoom;
+                    break;
+                }
+
+            }
+        }
     }
 }

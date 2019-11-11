@@ -41,6 +41,7 @@
             this.Name = "MDIFrm";
             this.Text = "Camobi Pizzaria Delivery";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.MDIFrm_Load);
             this.ResumeLayout(false);
 
         }
