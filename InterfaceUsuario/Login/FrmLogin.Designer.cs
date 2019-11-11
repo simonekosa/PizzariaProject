@@ -156,7 +156,7 @@
             this.lblVersao.Name = "lblVersao";
             this.lblVersao.Size = new System.Drawing.Size(283, 18);
             this.lblVersao.TabIndex = 10;
-            this.lblVersao.Text = "Versão {0}.{1}.{3}";
+            this.lblVersao.Text = "Versão {0}.{1}.{2}.{3}";
             this.lblVersao.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // FrmLogin
@@ -181,6 +181,7 @@
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Acesso ao Sistema:";
+            this.Load += new System.EventHandler(this.FrmLogin_Load);
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).EndInit();
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
