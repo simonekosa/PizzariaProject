@@ -93,6 +93,7 @@
             this.txtSenha.PasswordChar = '*';
             this.txtSenha.Size = new System.Drawing.Size(280, 20);
             this.txtSenha.TabIndex = 4;
+            this.txtSenha.Text = "123";
             // 
             // btnEntrar
             // 
@@ -167,7 +168,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::InterfaceUsuario.Properties.Resources.fundo_login;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1059, 657);
+            this.ClientSize = new System.Drawing.Size(1055, 653);
             this.ControlBox = false;
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnSair);

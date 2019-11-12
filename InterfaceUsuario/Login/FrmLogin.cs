@@ -33,7 +33,8 @@ namespace InterfaceUsuario.Login
                     cmbUsuarios.Items.Add(new ComboBoxItemUsuario(item.Login, item.Codigo, item.Senha));
                 }
             }
-
+            //Define o primeiro da lista
+            cmbUsuarios.SelectedIndex = 1;
         }
 
         private void BtnSair_Click(object sender, EventArgs e)

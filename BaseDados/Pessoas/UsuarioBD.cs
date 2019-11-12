@@ -21,12 +21,18 @@ namespace BaseDados.Pessoas
                     MySqlCommand comando = new MySqlCommand();
                     comando = conexao.CreateCommand();
 
-                    comando.CommandText = @"SELECT codigo, 
+                    string query = @"SELECT codigo, 
                                                    nome AS descricao, 
                                                    situacao 
-                                            FROM usuario
-                                            WHERE situacao = @situacao;";
-                    comando.Parameters.AddWithValue("Situacao", (int)status);
+                                            FROM usuario";
+                                      
+                    if(status != Status.Todos)
+                        query += " WHERE situacao = @situacao;";
+
+                    comando.CommandText = query;
+
+                    if (status != Status.Todos)
+                       comando.Parameters.AddWithValue("Situacao", (int)status);
 
                     MySqlDataReader reader = comando.ExecuteReader();
                     while (reader.Read())

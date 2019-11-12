@@ -1,4 +1,6 @@
 ﻿using BaseDados.Pessoas;
+using Entidades.Entidades;
+using Entidades.Enumeradores;
 using Entidades.Pessoas;
 using System;
 using System.Collections.Generic;
@@ -17,7 +19,12 @@ namespace Negocios.Pessoas
             _bd = new UsuarioBD();
         }
 
-        public List<Usuario> ListarUsuariosAtivos()
+        public List<EntidadeViewPesquisa> ListarEntidadesViewPesquisa(Status status)
+        {
+            return _bd.ListarEntidadesViewPesquisa(status);
+        }
+
+            public List<Usuario> ListarUsuariosAtivos()
         {
             return _bd.ListarUsuariosAtivos();
         }
