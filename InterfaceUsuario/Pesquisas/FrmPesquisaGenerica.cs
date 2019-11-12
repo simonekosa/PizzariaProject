@@ -1,4 +1,6 @@
 ﻿using Entidades.Entidades;
+using Entidades.Enumeradores;
+using InterfaceUsuario.Modulos;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -17,9 +19,18 @@ namespace InterfaceUsuario.Pesquisas
         public int iRetorno = 0;
 
 
-        public FrmPesquisaGenerica()
+        public FrmPesquisaGenerica(string strTitulo, Status status)
         {
             InitializeComponent();
+
+            this.Text = strTitulo;
+            if (status == Status.Ativo)
+                optSomenteAtivos.Checked = true;
+            else if (status == Status.Inativo)
+                optSomenteInativos.Checked = true;
+            else
+                optTodos.Checked = true;
+
         }
 
         private void FrmPesquisaGenerica_Load(object sender, EventArgs e)
@@ -62,6 +73,8 @@ namespace InterfaceUsuario.Pesquisas
                 var itemX = new ListViewItem(linha);
                 lvlListagem.Items.Add(itemX);
             }
+
+            Funcoes.ListViewColor(lvlListagem);
 
         }
     }
