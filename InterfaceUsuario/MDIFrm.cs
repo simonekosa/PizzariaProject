@@ -27,6 +27,7 @@ namespace InterfaceUsuario
 
             var frmLogin = new FrmLogin();
             frmLogin.ShowDialog();
+            if (!frmLogin.bFlagLogin) Application.Exit();
         }
 
     }

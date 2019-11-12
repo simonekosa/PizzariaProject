@@ -36,9 +36,9 @@
             this.btnEntrar = new System.Windows.Forms.Button();
             this.btnSair = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.lblVersao = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -102,6 +102,7 @@
             this.btnEntrar.TabIndex = 5;
             this.btnEntrar.Text = "ENTRAR";
             this.btnEntrar.UseVisualStyleBackColor = true;
+            this.btnEntrar.Click += new System.EventHandler(this.BtnEntrar_Click);
             // 
             // btnSair
             // 
@@ -111,6 +112,7 @@
             this.btnSair.TabIndex = 6;
             this.btnSair.Text = "CANCELAR";
             this.btnSair.UseVisualStyleBackColor = true;
+            this.btnSair.Click += new System.EventHandler(this.BtnSair_Click);
             // 
             // panel1
             // 
@@ -122,30 +124,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(329, 104);
             this.panel1.TabIndex = 7;
-            // 
-            // label2
-            // 
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Microsoft Tai Le", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Navy;
-            this.label2.Location = new System.Drawing.Point(17, 12);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(283, 18);
-            this.label2.TabIndex = 8;
-            this.label2.Text = "Sistema Pizzaria";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // label3
-            // 
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Microsoft Tai Le", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.Navy;
-            this.label3.Location = new System.Drawing.Point(18, 82);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(283, 18);
-            this.label3.TabIndex = 9;
-            this.label3.Text = "Copyright Simone Kosa";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // lblVersao
             // 
@@ -159,13 +137,37 @@
             this.lblVersao.Text = "Versão {0}.{1}.{2}.{3}";
             this.lblVersao.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
+            // label3
+            // 
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Microsoft Tai Le", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Navy;
+            this.label3.Location = new System.Drawing.Point(18, 82);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(283, 18);
+            this.label3.TabIndex = 9;
+            this.label3.Text = "Copyright Simone Kosa";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // label2
+            // 
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Microsoft Tai Le", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Navy;
+            this.label2.Location = new System.Drawing.Point(17, 12);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(283, 18);
+            this.label2.TabIndex = 8;
+            this.label2.Text = "Sistema Pizzaria";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
             // FrmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::InterfaceUsuario.Properties.Resources.fundo_login;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1063, 661);
+            this.ClientSize = new System.Drawing.Size(1059, 657);
             this.ControlBox = false;
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnSair);
