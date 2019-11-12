@@ -34,7 +34,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtBusca = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.optTodos = new System.Windows.Forms.RadioButton();
             this.optSomenteAtivos = new System.Windows.Forms.RadioButton();
             this.optSomenteInativos = new System.Windows.Forms.RadioButton();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -98,7 +98,7 @@
             // 
             this.groupBox1.Controls.Add(this.optSomenteInativos);
             this.groupBox1.Controls.Add(this.optSomenteAtivos);
-            this.groupBox1.Controls.Add(this.radioButton1);
+            this.groupBox1.Controls.Add(this.optTodos);
             this.groupBox1.Location = new System.Drawing.Point(29, 57);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(513, 52);
@@ -106,16 +106,16 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Filtro";
             // 
-            // radioButton1
+            // optTodos
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(7, 20);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(55, 17);
-            this.radioButton1.TabIndex = 0;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Todos";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.optTodos.AutoSize = true;
+            this.optTodos.Location = new System.Drawing.Point(7, 20);
+            this.optTodos.Name = "optTodos";
+            this.optTodos.Size = new System.Drawing.Size(55, 17);
+            this.optTodos.TabIndex = 0;
+            this.optTodos.TabStop = true;
+            this.optTodos.Text = "Todos";
+            this.optTodos.UseVisualStyleBackColor = true;
             // 
             // optSomenteAtivos
             // 
@@ -176,6 +176,7 @@
             this.MinimizeBox = false;
             this.Name = "FrmPesquisaGenerica";
             this.Text = "Consulta";
+            this.Load += new System.EventHandler(this.FrmPesquisaGenerica_Load);
             this.flowLayoutPanel1.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -195,7 +196,7 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.RadioButton optSomenteInativos;
         private System.Windows.Forms.RadioButton optSomenteAtivos;
-        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton optTodos;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.ListView lvlListagem;
     }
