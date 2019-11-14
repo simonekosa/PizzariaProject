@@ -45,7 +45,14 @@ namespace InterfaceUsuario.Pesquisas
                 Left = 0,
 
             };
+            LimparCampos();
             PreencherLista(lista);
+        }
+
+        public void LimparCampos()
+        {
+            txtBusca.Text = string.Empty;
+            iRetorno = 0;
         }
 
         private void PreencherLista(List<EntidadeViewPesquisa> list)
@@ -76,6 +83,11 @@ namespace InterfaceUsuario.Pesquisas
 
             Funcoes.ListViewColor(lvlListagem);
 
+        }
+
+        private void BtnSair_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

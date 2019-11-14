@@ -28,15 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmPesquisaGenerica));
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.btnSair = new System.Windows.Forms.Button();
             this.btnConfirmar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.txtBusca = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.optTodos = new System.Windows.Forms.RadioButton();
-            this.optSomenteAtivos = new System.Windows.Forms.RadioButton();
             this.optSomenteInativos = new System.Windows.Forms.RadioButton();
+            this.optSomenteAtivos = new System.Windows.Forms.RadioButton();
+            this.optTodos = new System.Windows.Forms.RadioButton();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.lvlListagem = new System.Windows.Forms.ListView();
             this.flowLayoutPanel1.SuspendLayout();
@@ -65,6 +66,7 @@
             this.btnSair.Text = "SAIR";
             this.btnSair.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnSair.UseVisualStyleBackColor = true;
+            this.btnSair.Click += new System.EventHandler(this.BtnSair_Click);
             // 
             // btnConfirmar
             // 
@@ -106,16 +108,16 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Filtro";
             // 
-            // optTodos
+            // optSomenteInativos
             // 
-            this.optTodos.AutoSize = true;
-            this.optTodos.Location = new System.Drawing.Point(7, 20);
-            this.optTodos.Name = "optTodos";
-            this.optTodos.Size = new System.Drawing.Size(55, 17);
-            this.optTodos.TabIndex = 0;
-            this.optTodos.TabStop = true;
-            this.optTodos.Text = "Todos";
-            this.optTodos.UseVisualStyleBackColor = true;
+            this.optSomenteInativos.AutoSize = true;
+            this.optSomenteInativos.Location = new System.Drawing.Point(400, 20);
+            this.optSomenteInativos.Name = "optSomenteInativos";
+            this.optSomenteInativos.Size = new System.Drawing.Size(107, 17);
+            this.optSomenteInativos.TabIndex = 2;
+            this.optSomenteInativos.TabStop = true;
+            this.optSomenteInativos.Text = "Somente Inativos";
+            this.optSomenteInativos.UseVisualStyleBackColor = true;
             // 
             // optSomenteAtivos
             // 
@@ -128,16 +130,16 @@
             this.optSomenteAtivos.Text = "Somente Ativos";
             this.optSomenteAtivos.UseVisualStyleBackColor = true;
             // 
-            // optSomenteInativos
+            // optTodos
             // 
-            this.optSomenteInativos.AutoSize = true;
-            this.optSomenteInativos.Location = new System.Drawing.Point(400, 20);
-            this.optSomenteInativos.Name = "optSomenteInativos";
-            this.optSomenteInativos.Size = new System.Drawing.Size(107, 17);
-            this.optSomenteInativos.TabIndex = 2;
-            this.optSomenteInativos.TabStop = true;
-            this.optSomenteInativos.Text = "Somente Inativos";
-            this.optSomenteInativos.UseVisualStyleBackColor = true;
+            this.optTodos.AutoSize = true;
+            this.optTodos.Location = new System.Drawing.Point(7, 20);
+            this.optTodos.Name = "optTodos";
+            this.optTodos.Size = new System.Drawing.Size(55, 17);
+            this.optTodos.TabIndex = 0;
+            this.optTodos.TabStop = true;
+            this.optTodos.Text = "Todos";
+            this.optTodos.UseVisualStyleBackColor = true;
             // 
             // groupBox2
             // 
@@ -172,9 +174,11 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.flowLayoutPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FrmPesquisaGenerica";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Consulta";
             this.Load += new System.EventHandler(this.FrmPesquisaGenerica_Load);
             this.flowLayoutPanel1.ResumeLayout(false);
