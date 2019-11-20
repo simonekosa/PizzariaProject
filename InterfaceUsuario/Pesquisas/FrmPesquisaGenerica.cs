@@ -3,12 +3,8 @@ using Entidades.Enumeradores;
 using InterfaceUsuario.Modulos;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace InterfaceUsuario.Pesquisas
@@ -107,6 +103,36 @@ namespace InterfaceUsuario.Pesquisas
                 iRetorno = Convert.ToInt32(lvlListagem.Items[iSelectedIndex].Text);
                 BtnSair_Click(btnSair, new EventArgs());
             }
+        }
+
+        private void OptTodos_CheckedChanged(object sender, EventArgs e)
+        {
+            if (!optTodos.Checked) return;
+            LimparCampos();
+            PreencherLista(lista);
+        }
+
+        private void OptSomenteAtivos_CheckedChanged(object sender, EventArgs e)
+        {
+            if (!optSomenteAtivos.Checked) return;
+            LimparCampos();
+            PreencherLista(lista);
+        }
+
+        private void OptSomenteInativos_CheckedChanged(object sender, EventArgs e)
+        {
+            if (!optSomenteInativos.Checked) return;
+            LimparCampos();
+            PreencherLista(lista);
+        }
+
+        private void TxtBusca_TextChanged(object sender, EventArgs e)
+        {
+            if (txtBusca.Text.Trim().Equals(string.Empty))
+                return;
+
+            var listResult = new List<EntidadeViewPesquisa>(from p in lista where p.Descricao.ToLower().Contains(txtBusca.Text.Trim().ToLower()) select p);
+            PreencherLista(listResult);
         }
     }
 }

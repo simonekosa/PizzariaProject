@@ -96,6 +96,7 @@
             this.txtBusca.Name = "txtBusca";
             this.txtBusca.Size = new System.Drawing.Size(513, 20);
             this.txtBusca.TabIndex = 2;
+            this.txtBusca.TextChanged += new System.EventHandler(this.TxtBusca_TextChanged);
             // 
             // groupBox1
             // 
@@ -119,6 +120,7 @@
             this.optSomenteInativos.TabStop = true;
             this.optSomenteInativos.Text = "Somente Inativos";
             this.optSomenteInativos.UseVisualStyleBackColor = true;
+            this.optSomenteInativos.CheckedChanged += new System.EventHandler(this.OptSomenteInativos_CheckedChanged);
             // 
             // optSomenteAtivos
             // 
@@ -130,6 +132,7 @@
             this.optSomenteAtivos.TabStop = true;
             this.optSomenteAtivos.Text = "Somente Ativos";
             this.optSomenteAtivos.UseVisualStyleBackColor = true;
+            this.optSomenteAtivos.CheckedChanged += new System.EventHandler(this.OptSomenteAtivos_CheckedChanged);
             // 
             // optTodos
             // 
@@ -141,6 +144,7 @@
             this.optTodos.TabStop = true;
             this.optTodos.Text = "Todos";
             this.optTodos.UseVisualStyleBackColor = true;
+            this.optTodos.CheckedChanged += new System.EventHandler(this.OptTodos_CheckedChanged);
             // 
             // groupBox2
             // 
