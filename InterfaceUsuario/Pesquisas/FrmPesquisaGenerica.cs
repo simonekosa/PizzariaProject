@@ -85,9 +85,28 @@ namespace InterfaceUsuario.Pesquisas
 
         }
 
+      
+        private void LvlListagem_DoubleClick(object sender, EventArgs e)
+        {
+            BtnConfirmar_Click(btnConfirmar, new EventArgs());
+        }
+
         private void BtnSair_Click(object sender, EventArgs e)
         {
-            Close();
+            this.Close();
+        }
+
+        private void BtnConfirmar_Click(object sender, EventArgs e)
+        {
+            if (lvlListagem.SelectedIndices.Count <= 0)
+                return;
+
+            var iSelectedIndex = Convert.ToInt32(lvlListagem.SelectedIndices[0]);
+            if(iSelectedIndex >= 0)
+            {
+                iRetorno = Convert.ToInt32(lvlListagem.Items[iSelectedIndex].Text);
+                BtnSair_Click(btnSair, new EventArgs());
+            }
         }
     }
 }

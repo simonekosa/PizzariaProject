@@ -79,6 +79,7 @@
             this.btnConfirmar.Text = "CONFIRMAR";
             this.btnConfirmar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnConfirmar.UseVisualStyleBackColor = true;
+            this.btnConfirmar.Click += new System.EventHandler(this.BtnConfirmar_Click);
             // 
             // label1
             // 
@@ -162,6 +163,7 @@
             this.lvlListagem.Size = new System.Drawing.Size(507, 328);
             this.lvlListagem.TabIndex = 0;
             this.lvlListagem.UseCompatibleStateImageBehavior = false;
+            this.lvlListagem.DoubleClick += new System.EventHandler(this.LvlListagem_DoubleClick);
             // 
             // FrmPesquisaGenerica
             // 
