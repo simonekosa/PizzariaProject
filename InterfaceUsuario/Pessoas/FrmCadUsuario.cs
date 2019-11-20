@@ -33,11 +33,26 @@ namespace InterfaceUsuario.Pessoas
             var frmPesquisa = new FrmPesquisaGenerica("Listagem de Usuarios", Status.Todos);
             frmPesquisa.lista = lista;
             frmPesquisa.ShowDialog();
+
+            var iRetorno = frmPesquisa.iRetorno;
+            //iRetorno = 0
+            if (iRetorno < 1) return;
+
+            txtCodigoUsuario.Text = iRetorno.ToString();
+            TxtCodigoUsuario_Validated(txtCodigoUsuario, new CancelEventArgs());
+            btnBscUsuario.Focus();
+            
+
         }
 
         private void BtnBscTipoUsuario_Click(object sender, EventArgs e)
         {
            
+        }
+
+        private void TxtCodigoUsuario_Validated(object sender, EventArgs e)
+        {
+
         }
     }
 }

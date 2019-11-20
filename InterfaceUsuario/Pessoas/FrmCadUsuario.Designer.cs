@@ -29,6 +29,9 @@
         private void InitializeComponent()
         {
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.btnConfirma = new System.Windows.Forms.Button();
+            this.btnExcluir = new System.Windows.Forms.Button();
+            this.btnCancelar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.txtCodigoUsuario = new System.Windows.Forms.TextBox();
             this.txtCodigoTipoUsuario = new System.Windows.Forms.TextBox();
@@ -43,9 +46,6 @@
             this.ucSituacao1 = new InterfaceUsuario.UserControls.ucSituacao();
             this.btnBscTipoUsuario = new System.Windows.Forms.Button();
             this.btnBscUsuario = new System.Windows.Forms.Button();
-            this.btnConfirma = new System.Windows.Forms.Button();
-            this.btnExcluir = new System.Windows.Forms.Button();
-            this.btnCancelar = new System.Windows.Forms.Button();
             this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -58,6 +58,42 @@
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(338, 48);
             this.flowLayoutPanel1.TabIndex = 0;
+            // 
+            // btnConfirma
+            // 
+            this.btnConfirma.Image = global::InterfaceUsuario.Properties.Resources.confirmar;
+            this.btnConfirma.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnConfirma.Location = new System.Drawing.Point(3, 3);
+            this.btnConfirma.Name = "btnConfirma";
+            this.btnConfirma.Size = new System.Drawing.Size(105, 42);
+            this.btnConfirma.TabIndex = 0;
+            this.btnConfirma.Text = "CONFIRMAR";
+            this.btnConfirma.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnConfirma.UseVisualStyleBackColor = true;
+            // 
+            // btnExcluir
+            // 
+            this.btnExcluir.Image = global::InterfaceUsuario.Properties.Resources.excluir;
+            this.btnExcluir.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnExcluir.Location = new System.Drawing.Point(114, 3);
+            this.btnExcluir.Name = "btnExcluir";
+            this.btnExcluir.Size = new System.Drawing.Size(105, 42);
+            this.btnExcluir.TabIndex = 1;
+            this.btnExcluir.Text = "EXCLUIR";
+            this.btnExcluir.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnExcluir.UseVisualStyleBackColor = true;
+            // 
+            // btnCancelar
+            // 
+            this.btnCancelar.Image = global::InterfaceUsuario.Properties.Resources.cancelar;
+            this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnCancelar.Location = new System.Drawing.Point(225, 3);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(105, 42);
+            this.btnCancelar.TabIndex = 2;
+            this.btnCancelar.Text = "CANCELAR";
+            this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnCancelar.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
@@ -75,6 +111,7 @@
             this.txtCodigoUsuario.Name = "txtCodigoUsuario";
             this.txtCodigoUsuario.Size = new System.Drawing.Size(100, 20);
             this.txtCodigoUsuario.TabIndex = 3;
+            this.txtCodigoUsuario.Validated += new System.EventHandler(this.TxtCodigoUsuario_Validated);
             // 
             // txtCodigoTipoUsuario
             // 
@@ -178,42 +215,6 @@
             this.btnBscUsuario.TabIndex = 2;
             this.btnBscUsuario.UseVisualStyleBackColor = true;
             this.btnBscUsuario.Click += new System.EventHandler(this.BtnBscUsuario_Click);
-            // 
-            // btnConfirma
-            // 
-            this.btnConfirma.Image = global::InterfaceUsuario.Properties.Resources.confirmar;
-            this.btnConfirma.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnConfirma.Location = new System.Drawing.Point(3, 3);
-            this.btnConfirma.Name = "btnConfirma";
-            this.btnConfirma.Size = new System.Drawing.Size(105, 42);
-            this.btnConfirma.TabIndex = 0;
-            this.btnConfirma.Text = "CONFIRMAR";
-            this.btnConfirma.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnConfirma.UseVisualStyleBackColor = true;
-            // 
-            // btnExcluir
-            // 
-            this.btnExcluir.Image = global::InterfaceUsuario.Properties.Resources.excluir;
-            this.btnExcluir.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnExcluir.Location = new System.Drawing.Point(114, 3);
-            this.btnExcluir.Name = "btnExcluir";
-            this.btnExcluir.Size = new System.Drawing.Size(105, 42);
-            this.btnExcluir.TabIndex = 1;
-            this.btnExcluir.Text = "EXCLUIR";
-            this.btnExcluir.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnExcluir.UseVisualStyleBackColor = true;
-            // 
-            // btnCancelar
-            // 
-            this.btnCancelar.Image = global::InterfaceUsuario.Properties.Resources.cancelar;
-            this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnCancelar.Location = new System.Drawing.Point(225, 3);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(105, 42);
-            this.btnCancelar.TabIndex = 2;
-            this.btnCancelar.Text = "CANCELAR";
-            this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnCancelar.UseVisualStyleBackColor = true;
             // 
             // FrmCadUsuario
             // 
