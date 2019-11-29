@@ -19,7 +19,7 @@ namespace InterfaceUsuario.UserControls
 
         }
 
-        private void InicializarSituacao(Status status)
+        public void InicializarSituacao(Status status)
         {
             if (DesignMode) return;
             _status = status;

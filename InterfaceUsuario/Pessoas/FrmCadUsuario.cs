@@ -2,19 +2,15 @@
 using InterfaceUsuario.Pesquisas;
 using Negocios.Pessoas;
 using System;
-using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace InterfaceUsuario.Pessoas
 {
     public partial class FrmCadUsuario : Form
     {
+        private bool IsNovo;
+
         public FrmCadUsuario()
         {
             InitializeComponent();
@@ -42,7 +38,6 @@ namespace InterfaceUsuario.Pessoas
             TxtCodigoUsuario_Validated(txtCodigoUsuario, new CancelEventArgs());
             btnBscUsuario.Focus();
             
-
         }
 
         private void BtnBscTipoUsuario_Click(object sender, EventArgs e)
@@ -51,6 +46,50 @@ namespace InterfaceUsuario.Pessoas
         }
 
         private void TxtCodigoUsuario_Validated(object sender, EventArgs e)
+        {
+            //Verificar se esta vazio
+            if (txtCodigoUsuario.Text.Trim().Equals(string.Empty))
+                return;
+
+            var oUsuario = new UsuarioNG().Buscar(Convert.ToInt32(txtCodigoUsuario.Text.Trim()));
+            if(oUsuario == null)
+            {
+                btnExcluir.Enabled = false;
+                return;
+            }
+
+            //carregar informações na tela
+            IsNovo = false;
+            txtNomeUsuario.Text = oUsuario.Nome;
+            txtLoginUsuario.Text = oUsuario.Login;
+            txtSenhaUsuario.Text = oUsuario.Senha;
+            txtCodigoTipoUsuario.Text = oUsuario.TipoUsuario.Codigo.ToString();
+
+            //1º - Validar Tipo Usuário
+            //2º - Máscara do campo código Usuário
+            //3º - Máscara do campo código tipo usuaá
+
+            oUcSituacao.InicializarSituacao(oUsuario.Status);
+            btnExcluir.Enabled = true;
+
+        }
+
+        private void FrmCadUsuario_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BtnCancelar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BtnExcluir_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BtnConfirma_Click(object sender, EventArgs e)
         {
 
         }

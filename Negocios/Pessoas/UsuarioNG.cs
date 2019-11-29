@@ -28,5 +28,11 @@ namespace Negocios.Pessoas
         {
             return _bd.ListarUsuariosAtivos();
         }
-    }
+
+        public Usuario Buscar(int cod)
+        {
+            return _bd.Buscar(cod);
+        }
+
+        }
 }

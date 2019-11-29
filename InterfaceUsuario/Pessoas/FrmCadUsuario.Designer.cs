@@ -43,7 +43,7 @@
             this.txtSenhaUsuario = new System.Windows.Forms.TextBox();
             this.lblSenha = new System.Windows.Forms.Label();
             this.lblMstTipoUsuario = new System.Windows.Forms.Label();
-            this.ucSituacao1 = new InterfaceUsuario.UserControls.ucSituacao();
+            this.oUcSituacao = new InterfaceUsuario.UserControls.ucSituacao();
             this.btnBscTipoUsuario = new System.Windows.Forms.Button();
             this.btnBscUsuario = new System.Windows.Forms.Button();
             this.flowLayoutPanel1.SuspendLayout();
@@ -70,6 +70,7 @@
             this.btnConfirma.Text = "CONFIRMAR";
             this.btnConfirma.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnConfirma.UseVisualStyleBackColor = true;
+            this.btnConfirma.Click += new System.EventHandler(this.BtnConfirma_Click);
             // 
             // btnExcluir
             // 
@@ -82,6 +83,7 @@
             this.btnExcluir.Text = "EXCLUIR";
             this.btnExcluir.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnExcluir.UseVisualStyleBackColor = true;
+            this.btnExcluir.Click += new System.EventHandler(this.BtnExcluir_Click);
             // 
             // btnCancelar
             // 
@@ -94,6 +96,7 @@
             this.btnCancelar.Text = "CANCELAR";
             this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.BtnCancelar_Click);
             // 
             // label1
             // 
@@ -189,12 +192,12 @@
             this.lblMstTipoUsuario.Size = new System.Drawing.Size(467, 23);
             this.lblMstTipoUsuario.TabIndex = 13;
             // 
-            // ucSituacao1
+            // oUcSituacao
             // 
-            this.ucSituacao1.Location = new System.Drawing.Point(545, 159);
-            this.ucSituacao1.Name = "ucSituacao1";
-            this.ucSituacao1.Size = new System.Drawing.Size(184, 60);
-            this.ucSituacao1.TabIndex = 15;
+            this.oUcSituacao.Location = new System.Drawing.Point(545, 159);
+            this.oUcSituacao.Name = "oUcSituacao";
+            this.oUcSituacao.Size = new System.Drawing.Size(184, 60);
+            this.oUcSituacao.TabIndex = 15;
             // 
             // btnBscTipoUsuario
             // 
@@ -221,7 +224,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(740, 287);
-            this.Controls.Add(this.ucSituacao1);
+            this.Controls.Add(this.oUcSituacao);
             this.Controls.Add(this.btnBscTipoUsuario);
             this.Controls.Add(this.lblMstTipoUsuario);
             this.Controls.Add(this.txtSenhaUsuario);
@@ -243,6 +246,7 @@
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.Text = "Cadastro de Usuario";
+            this.Load += new System.EventHandler(this.FrmCadUsuario_Load);
             this.flowLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -268,6 +272,6 @@
         private System.Windows.Forms.Label lblSenha;
         private System.Windows.Forms.Label lblMstTipoUsuario;
         private System.Windows.Forms.Button btnBscTipoUsuario;
-        private UserControls.ucSituacao ucSituacao1;
+        private UserControls.ucSituacao oUcSituacao;
     }
 }
